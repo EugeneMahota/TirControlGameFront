@@ -1,0 +1,122 @@
+<div class="mt-2 ml-3 mr-3">
+
+  <div class="row mb-3">
+    <div class="col-2 align-self-center">
+      <h4 class="font-weight-bold ml-2 pb-0 mb-0 title">SmartTir</h4>
+    </div>
+    <div class="col-10 text-right">
+
+      <div class="btn-group mr-4" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Настройки 1</button>
+        <button type="button" class="btn btn-secondary">Настройки 2</button>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Категория 1</button>
+        <button type="button" class="btn btn-secondary">Категория 2</button>
+        <button type="button" class="btn btn-secondary">Категория 3</button>
+        <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModalLong"><i
+          class="fas fa-info"></i></button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-2 mb-3" *ngFor="let game of listGame">
+      <div class="card h-100">
+        <img class="card-img-top" src="{{game.photo}}">
+        <div class="carousel-caption">
+          <div class="card-text">
+            {{game.name}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<app-list-active-game></app-list-active-game>
+
+
+<app-footer></app-footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Суперинтересная инструкция</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+        Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+        Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+        rutrum faucibus dolor auctor.
+
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+        Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+        Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+        rutrum faucibus dolor auctor.
+
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+        Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+        Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+        rutrum faucibus dolor auctor.
+
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+        Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+        Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+        rutrum faucibus dolor auctor.
+
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+        Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+        Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+        rutrum faucibus dolor auctor.
+
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+        Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+        Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+        rutrum faucibus dolor auctor.
+
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
