@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-3"></div>
+    <div class="col-lg-4 col-md-6 mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-2 mt-2">Remote <span class="purple">TIR</span></h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="loginForm">
+            <div class="form-group">
+              <label for="login">Логин</label>
+              <input class="form-control" type="text" id="login" name="login" formControlName="login">
+              <small class="text-muted">Введите выданый логин.</small>
+            </div>
+            <div class="form-group">
+              <label for="pin">Пинкод</label>
+              <input class="form-control" type="password" id="pin" name="pin" formControlName="pin">
+              <small class="text-muted">Введите четырехзначный пинкод.</small>
+            </div>
+            <div class="form-row">
+              <div class="col-auto">
+                <button type="submit" class="btn pl-5 pr-5 btn-login" (click)="login()">ВОЙТИ</button>
+              </div>
+              <div class="col-auto align-self-center">
+                <div class="custom-control custom-checkbox ml-2">
+                  <input type="checkbox" class="custom-control-input" id="save" name="save" formControlName="save">
+                  <label class="custom-control-label" for="save">Запомнить?</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-3"></div>
+  </div>
+</div>

@@ -596,7 +596,7 @@ $(function () {
         assert.notOk(event.isDefaultPrevented(), 'navigating to href will happen')
 
         setTimeout(function () {
-          assert.ok(event.isDefaultPrevented(), 'model shown instead of navigating to href')
+          assert.ok(event.isDefaultPrevented(), 'models shown instead of navigating to href')
           done()
         }, 1)
       })

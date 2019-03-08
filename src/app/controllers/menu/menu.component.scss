@@ -3,20 +3,20 @@
 }
 
 .card {
-  border-radius: 3px;
+  border-radius: 2px;
 }
 img {
-  border-radius: 3px;
+  border-radius: 2px;
 }
 .card:after {
-  border-radius: 3px;
+  border-radius: 2px;
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(52, 52, 105, 0.7);
+  background: rgba(142, 36, 170, 0.61);
   z-index: 2;
 }
 
