@@ -5,7 +5,7 @@ $darkGrey: #616161;
 $purple: #8e24aa;
 $green: #43a047;
 $red: #e53935;
-
+$blue: #0d47a1;
 .card {
   border-radius: $border-radius;
 }
@@ -59,7 +59,7 @@ $red: #e53935;
 
 .custom-control-label::after, .custom-control-label:focus, .custom-control-label:focus {
   border-radius: $border-radius;
-  background-color: $purple;
+  background-color: $blue;
   box-shadow: none!important;
   color: #FFFFFF;
   cursor: pointer;

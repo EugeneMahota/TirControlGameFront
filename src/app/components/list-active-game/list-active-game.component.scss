@@ -1,4 +1,20 @@
+$blue: #0d47a1;
+$borderRadius: 2px;
+$blueGrey: #607d8b;
+
+.footer-card {
+  color: $blueGrey;
+  background-color: lighten($blueGrey, 50);
+  border-bottom: {
+    left-radius: $borderRadius;
+    right-radius: $borderRadius;
+  }
+}
+
 .scroll-horizontal {
   overflow: auto;
   white-space: nowrap;
+}
+.image {
+  border-top-left-radius: $borderRadius;
 }

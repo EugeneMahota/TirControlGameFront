@@ -2985,7 +2985,7 @@ concierge-bell:
     terms:
       - attention
       - hotel
-      - service
+      - services
       - support
   styles:
     - solid
@@ -11914,7 +11914,7 @@ taxi:
       - cab
       - cabbie
       - car
-      - car service
+      - car services
       - lyft
       - machine
       - transportation

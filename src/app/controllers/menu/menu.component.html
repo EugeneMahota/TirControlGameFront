@@ -1,33 +1,6 @@
-<div class="mt-2 ml-3 mr-3">
-
-  <div class="row mb-3">
-    <div class="col-4">
-      <h4 class="ml-2 pb-0 mb-0 title">Remote <span class="purple">TIR</span></h4>
-    </div>
-    <div class="col-8 text-right">
-      <button class="btn btn-sm mt-1" data-toggle="modal" data-target="#exampleModalCenter">ВЫХОД <i class="fas fa-sign-out-alt ml-2"></i></button>
-    </div>
-
-  </div>
-
-  <div class="row">
-
-    <div class="col-md-2 mb-3" *ngFor="let game of listGame">
-      <div class="card h-100">
-        <img class="card-img-top" src="{{game.photo}}">
-        <div class="carousel-caption">
-          <div class="card-text">
-            {{game.name}}
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
+<div class="mt-3 ml-3 mr-3">
+  <router-outlet></router-outlet>
 </div>
-
 
 <app-list-active-game></app-list-active-game>
 
@@ -36,23 +9,4 @@
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Выход из аккаунта</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Вы действительно хотите выйти?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn">Да</button>
-        <button type="button" class="btn" data-dismiss="modal">Не очень</button>
-      </div>
-    </div>
-  </div>
-</div>
+

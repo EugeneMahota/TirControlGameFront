@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {DataService} from '../../service/data.service';
+import {GameService} from '../../services/game.service';
+import {ActiveGameService} from '../../services/active-game.service';
+import {Game} from '../../models/game';
 
 @Component({
   selector: 'app-menu',
@@ -8,12 +10,12 @@ import {DataService} from '../../service/data.service';
 })
 export class MenuComponent implements OnInit {
 
-  listGame: any[] = [];
-  constructor(private dataService: DataService) {
+
+  constructor() {
   }
 
   ngOnInit() {
-    this.listGame = this.dataService.getListData();
   }
+
 
 }

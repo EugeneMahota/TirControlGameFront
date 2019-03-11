@@ -1,183 +1,84 @@
+<div class="scroll-horizontal pb-3">
 
-
-<div class="scroll-horizontal pb-3 pt-2">
-
-  <div class="col-md-4 d-inline-block">
+  <div class="col-4 d-inline-block" [@game] *ngFor="let game of listActiveGame">
     <div class="card">
       <div class="row">
-        <div class="col-md-6 mr-0 pr-0">
-          <img class="img-fluid rounded-left" src="https://cdn.kastatic.org/images/avatars/svg/piceratops-ultimate.svg">
+        <div class="col-6 mr-0 pr-0 text-center">
+          <img class="img-fluid image" src="{{game.image}}">
         </div>
-        <div class="col-md-6 ml-0 pl-0">
+        <div class="col-6 ml-0 pl-0 border-left">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">
+            <li class="list-group-item border-0">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-6">
                   Время:
                 </div>
-                <div class="col-md-6 text-center">
-                  2:45
+                <div class="col-6 text-center">
+                  <countdown [config]="{leftTime: game.time}" (finished)="finishGame(game)">$!m!:$!s!</countdown>
                 </div>
               </div>
             </li>
-            <li class="list-group-item">
+            <li class="list-group-item border-top">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-6">
                   Осечек:
                 </div>
-                <div class="col-md-6 text-center">
-                  0
+                <div class="col-6 text-center">
+                  {{game.miss}}
                 </div>
               </div>
             </li>
-            <li class="list-group-item">
+            <li class="list-group-item border-top">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-6">
                   Ост. выстр:
                 </div>
-                <div class="col-md-6 text-center">
-                  6
+                <div class="col-6 text-center">
+                  {{game.shot}}
                 </div>
               </div>
             </li>
           </ul>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 d-inline-block">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-6 mr-0 pr-0">
-          <img class="img-fluid rounded-left" src="https://previews.123rf.com/images/hedgehogvector/hedgehogvector1603/hedgehogvector160302249/54488945-weapon-icon.jpg">
-        </div>
-        <div class="col-md-6 ml-0 pl-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-md-6">
-                  Время:
-                </div>
-                <div class="col-md-6 text-center">
-                  2:45
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-md-6">
-                  Осечек:
-                </div>
-                <div class="col-md-6 text-center">
-                  0
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-md-6">
-                  Ост. выстр:
-                </div>
-                <div class="col-md-6 text-center">
-                  6
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 d-inline-block">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-6 mr-0 pr-0">
-          <img class="img-fluid rounded-left" src="http://assetsforall.com/wp-content/uploads/2018/04/Funny-cartoon-face-expression-design-vector-03-960x960.jpg">
-        </div>
-        <div class="col-md-6 ml-0 pl-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-md-6">
-                  Время:
-                </div>
-                <div class="col-md-6 text-center">
-                  2:45
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-md-6">
-                  Осечек:
-                </div>
-                <div class="col-md-6 text-center">
-                  0
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-md-6">
-                  Ост. выстр:
-                </div>
-                <div class="col-md-6 text-center">
-                  6
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 d-inline-block">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-6 mr-0 pr-0">
-          <img class="img-fluid rounded-left" src="https://thumbs.dreamstime.com/x/hand-pointing-gun-icon-icon-cartoon-style-isolated-vector-illustration-88212515.jpg">
-        </div>
-        <div class="col-md-6 ml-0 pl-0">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-md-6">
-                  Время:
-                </div>
-                <div class="col-md-6 text-center">
-                  2:45
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-md-6">
-                  Осечек:
-                </div>
-                <div class="col-md-6 text-center">
-                  0
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col-md-6">
-                  Ост. выстр:
-                </div>
-                <div class="col-md-6 text-center">
-                  6
-                </div>
-              </div>
-            </li>
-          </ul>
+      <div class="text-center footer-card border-top">
+        <div class="row">
+          <div class="col-4 border-right p-2">
+            <i class="fas fa-gift"></i>
+          </div>
+          <div class="col-4 border-right p-2">
+            <i class="fas fa-cog"></i>
+          </div>
+          <div class="col-4 p-2" data-toggle="modal" data-target="#exampleModalCenter1" (click)="itemGame = game">
+            <i class="fas fa-trash-alt"></i>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
 
+</div>
 
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Завершить игру</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Вы действительно хотите завершить "{{itemGame.name}}"?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-dismiss="modal" (click)="deleteGame()">Да</button>
+        <button type="button" class="btn" data-dismiss="modal">Не очень</button>
+      </div>
+    </div>
+  </div>
 </div>
