@@ -1,3 +1,8 @@
+@import "~angular-notifier/styles/core.css";
+@import "~angular-notifier/styles/themes/theme-material.css";
+@import "~angular-notifier/styles/types/type-error.css";
+@import "~angular-notifier/styles/types/type-success.css";
+
 @import url('https://fonts.googleapis.com/css?family=Oswald:200');
 $purple: #8e24aa;
 $blue: #0d47a1;
@@ -13,7 +18,7 @@ body {
 }
 .btn {
   border-radius:2px;
-  /*box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);*/
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 .purple {
   color: $purple;

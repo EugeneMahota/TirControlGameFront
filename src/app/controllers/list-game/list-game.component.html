@@ -1,6 +1,6 @@
 <div class="row" [@list-game]>
-  <div class="col-2 mb-3" *ngFor="let game of listGame" routerLink="{{game.id}}">
-    <div class="card h-100">
+  <div class="col-2 mb-3" *ngFor="let game of listGame" (click)="onGame(game.id)">
+    <div class="card h-100" [ngClass]="listActiveGame.indexOf(game) !== -1 ? 'disabled-game':''">
       <img class="card-img" src="{{game.image}}">
       <div class="carousel-caption">
         <div class="card-text">

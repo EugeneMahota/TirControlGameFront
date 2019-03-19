@@ -27,12 +27,10 @@ export class ListActiveGameComponent implements OnInit {
   listActiveGame: any[] = [];
 
   constructor(private activeGameService: ActiveGameService) {
+    this.activeGameService.onListGame.subscribe(res => {this.listActiveGame = res});
   }
 
   ngOnInit() {
-    setInterval(() => {
-      this.listActiveGame = this.activeGameService.getGame();
-    }, 1000);
   }
 
   finishGame(game) {

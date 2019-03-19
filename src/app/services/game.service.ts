@@ -12,7 +12,7 @@ export class GameService {
       name: 'Игра на сувенир',
       shot: 6,
       miss: 4,
-      time: 1000
+      time: 120
     },
     {
       id: 2,
@@ -36,7 +36,7 @@ export class GameService {
       name: 'Игра на почку',
       shot: 6,
       miss: 4,
-      time: 10
+      time: 15
     },
     {
       id: 5,
@@ -44,7 +44,7 @@ export class GameService {
       name: 'Игра на печеньки',
       shot: 6,
       miss: 4,
-      time: 10
+      time: 15
     },
     {
       id: 6,
@@ -52,7 +52,7 @@ export class GameService {
       name: 'Игра на негров',
       shot: 6,
       miss: 4,
-      time: 10
+      time: 15
     },
     {
       id: 7,
@@ -60,7 +60,7 @@ export class GameService {
       name: 'Игра на нервах',
       shot: 6,
       miss: 4,
-      time: 10
+      time: 15
     },
     {
       id: 8,
@@ -68,7 +68,7 @@ export class GameService {
       name: 'Игра на банджо',
       shot: 6,
       miss: 4,
-      time: 10
+      time: 15
     },
     {
       id: 9,
@@ -76,7 +76,7 @@ export class GameService {
       name: 'Игра на воображение',
       shot: 6,
       miss: 4,
-      time: 10
+      time: 15
     },
     {
       id: 10,
@@ -84,7 +84,7 @@ export class GameService {
       name: 'Игра на еще что нибудь',
       shot: 6,
       miss: 4,
-      time: 10
+      time: 15
     },
     {
       id: 11,
@@ -92,7 +92,7 @@ export class GameService {
       name: 'Игра на кости',
       shot: 6,
       miss: 4,
-      time: 10
+      time: 15
     },
     {
       id: 12,
@@ -100,7 +100,7 @@ export class GameService {
       name: 'Игра на вжух',
       shot: 6,
       miss: 4,
-      time: 10
+      time: 15
     }
   ];
 

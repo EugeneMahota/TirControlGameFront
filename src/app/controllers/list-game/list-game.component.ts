@@ -3,6 +3,8 @@ import {Game} from '../../models/game';
 import {GameService} from '../../services/game.service';
 import {ActiveGameService} from '../../services/active-game.service';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {ActivatedRoute, Router} from '@angular/router';
+import {NotifierService} from 'angular-notifier';
 
 @Component({
   selector: 'app-list-game',
@@ -22,13 +24,28 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class ListGameComponent implements OnInit {
 
-  itemGame: Game = new Game();
-  listGame: any[] = [];
+  listGame: Game[] = [];
+  listActiveGame: Game[] = [];
 
-  constructor(private dataService: GameService, private activeGame: ActiveGameService) {
+  private notifier: NotifierService;
+
+  constructor(private dataService: GameService, private activeGame: ActiveGameService, private router: Router, private route: ActivatedRoute, notifierService: NotifierService) {
+    this.notifier = notifierService;
+    this.activeGame.onListGame.subscribe(res => {
+      this.listActiveGame = res;
+    });
   }
 
   ngOnInit() {
+    this.listActiveGame = this.activeGame.getGame();
     this.listGame = this.dataService.getListData();
+  }
+
+  onGame(id: number) {
+    if (this.listActiveGame.find(x => x.id === id)) {
+      this.notifier.notify('error', 'Игра уже запущенна!');
+    } else {
+      this.router.navigate([id], {relativeTo: this.route});
+    }
   }
 }

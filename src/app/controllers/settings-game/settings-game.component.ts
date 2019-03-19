@@ -37,6 +37,10 @@ export class SettingsGameComponent implements OnInit {
 
   addGame() {
     this.activeGame.pushGame(this.itemGame);
+    this.onBack();
+  }
+
+  onBack() {
     this.router.navigate(['menu', 'game']);
   }
 

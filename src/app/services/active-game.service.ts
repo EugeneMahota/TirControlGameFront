@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
+import {Game} from '../models/game';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class ActiveGameService {
 
 
+  onListGame: EventEmitter<Game[]> = new EventEmitter();
   listActiveGame: any[] = [];
   constructor() { }
 
@@ -16,10 +18,12 @@ export class ActiveGameService {
 
   deleteGame(delete_game) {
     this.listActiveGame = this.listActiveGame.filter(game => game !== delete_game);
+    this.onListGame.emit(this.listActiveGame);
   }
 
   pushGame(game) {
     this.listActiveGame.push(game);
+    this.onListGame.emit(this.listActiveGame);
   }
 
 

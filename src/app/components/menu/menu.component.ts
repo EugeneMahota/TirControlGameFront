@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {GameService} from '../../services/game.service';
-import {ActiveGameService} from '../../services/active-game.service';
-import {Game} from '../../models/game';
 
 @Component({
   selector: 'app-menu',
